@@ -55,7 +55,6 @@ public class BuildingTile : MonoBehaviour
 
     private void GetReferences()
     {
-        _buyButton = buy
 
     }
 
