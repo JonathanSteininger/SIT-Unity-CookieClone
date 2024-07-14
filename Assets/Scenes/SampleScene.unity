@@ -603,6 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textChange: {fileID: 1630811021}
+  buildingList: {fileID: 0}
   buildings:
   - name: Cookie Farm
     cookiesPerSecond: 0.5
@@ -769,6 +770,7 @@ GameObject:
   - component: {fileID: 1811684197}
   - component: {fileID: 1811684199}
   - component: {fileID: 1811684198}
+  - component: {fileID: 1811684200}
   m_Layer: 5
   m_Name: BuildingsContainer
   m_TagString: Untagged
@@ -834,6 +836,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811684196}
   m_CullTransparentMesh: 1
+--- !u!114 &1811684200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811684196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982d1a3d40b5a01478c96852473741d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1921379098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,6 +1247,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2461590302071313773, guid: 5e23af5312bfada439a5915985907bb5, type: 3}
+      propertyPath: m_Name
+      value: CookieSpeedTotal
+      objectReference: {fileID: 0}
     - target: {fileID: 6824634606646735111, guid: 5e23af5312bfada439a5915985907bb5, type: 3}
       propertyPath: m_Name
       value: BuildingPrefab
@@ -1240,13 +1258,75 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6824634606646735111, guid: 5e23af5312bfada439a5915985907bb5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8104434506291387220}
   m_SourcePrefab: {fileID: 100100000, guid: 5e23af5312bfada439a5915985907bb5, type: 3}
 --- !u!224 &8104434506291387211 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2173234301703817553, guid: 5e23af5312bfada439a5915985907bb5, type: 3}
   m_PrefabInstance: {fileID: 8104434506291387210}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8104434506291387212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2461590302071313773, guid: 5e23af5312bfada439a5915985907bb5, type: 3}
+  m_PrefabInstance: {fileID: 8104434506291387210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8104434506291387213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7632529754215295451, guid: 5e23af5312bfada439a5915985907bb5, type: 3}
+  m_PrefabInstance: {fileID: 8104434506291387210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8104434506291387214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8896609133910928404, guid: 5e23af5312bfada439a5915985907bb5, type: 3}
+  m_PrefabInstance: {fileID: 8104434506291387210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8104434506291387215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2436389270584778158, guid: 5e23af5312bfada439a5915985907bb5, type: 3}
+  m_PrefabInstance: {fileID: 8104434506291387210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8104434506291387216 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7524435096095581370, guid: 5e23af5312bfada439a5915985907bb5, type: 3}
+  m_PrefabInstance: {fileID: 8104434506291387210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8104434506291387217 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1039042067220434157, guid: 5e23af5312bfada439a5915985907bb5, type: 3}
+  m_PrefabInstance: {fileID: 8104434506291387210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8104434506291387218 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8127774733234665354, guid: 5e23af5312bfada439a5915985907bb5, type: 3}
+  m_PrefabInstance: {fileID: 8104434506291387210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8104434506291387219 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6824634606646735111, guid: 5e23af5312bfada439a5915985907bb5, type: 3}
+  m_PrefabInstance: {fileID: 8104434506291387210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8104434506291387220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104434506291387219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be05b1574ce78ce448e79419851d6902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buyButtonObject: {fileID: 8104434506291387216}
+  sellButtonObject: {fileID: 8104434506291387215}
+  nameTextObject: {fileID: 8104434506291387218}
+  priceTextObject: {fileID: 8104434506291387217}
+  countTextObject: {fileID: 8104434506291387214}
+  CPSTextObject: {fileID: 8104434506291387213}
+  totalCPSTextObject: {fileID: 8104434506291387212}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
