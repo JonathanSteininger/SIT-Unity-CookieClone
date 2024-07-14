@@ -11,6 +11,8 @@ public class test : MonoBehaviour
     public GameObject textChange;
     private TMP_Text textComponent;
 
+    public GameObject buildingList;
+
 
     private uint cookieCount = 0;
     private uint clickPower = 0;
