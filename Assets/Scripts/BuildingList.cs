@@ -11,15 +11,9 @@ public class BuildingList : MonoBehaviour
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-    public AddBuilding()
-    {
-
     }
 }

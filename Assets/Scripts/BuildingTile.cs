@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class BuildingTile : MonoBehaviour
 {
+    public GameObject gameManager;
+    private GameManagerScript gameManagerScript;
+
+
     public GameObject buyButtonObject;
     public GameObject sellButtonObject;
     public GameObject nameTextObject;
@@ -105,6 +109,8 @@ public class BuildingTile : MonoBehaviour
             _countText = new TextReference(countTextObject);
             _CPSText = new TextReference(CPSTextObject);
             _totalCPSText = new TextReference(totalCPSTextObject);
+
+            //sets gamemanger reference. To get game info.
         } catch (Exception e)
         {
             Debug.Log($"Error loading BuildingTile references. : ${e.Message}");
@@ -117,14 +123,14 @@ public class BuildingTile : MonoBehaviour
     {
         if (buildingStats == null)
         {
-            Debug.Log("BuildingStats not declared. Skipping updating UI.");
+            Debug.Log("BuildingStats not declared. Skipping updating UI. ");
             return;
         }
-        _nameText.UpdateText(buildingStats.name);
-        _priceText.UpdateText($"Price: ${buildingStats.price} Cookies");
-        _countText.UpdateText($"Count: ${buildingStats.boughtCount}");
-        _CPSText.UpdateText($"CPS: ${buildingStats.cookiesPerSecond}");
-        _totalCPSText.UpdateText($"Total CPS: ${buildingStats.totalCookiesPerSecond}");
+        _nameText.UpdateText(buildingStats.Name);
+        _priceText.UpdateText($"Price: {buildingStats.getFinalPrice()} Cookies");
+        _countText.UpdateText($"Count: {buildingStats.BoughtCount}");
+        _CPSText.UpdateText($"CPS: {buildingStats.CookiesPerSecond}");
+        _totalCPSText.UpdateText($"Total CPS: {buildingStats.totalCookiesPerSecond}");
         // Could later make this change dynamically.
         _buyButton.UpdateText("Buy");
         _sellButton.UpdateText("Sell");
@@ -135,4 +141,37 @@ public class BuildingTile : MonoBehaviour
     {
         updateText();
     }
+
+    public void ClickBuy()
+    {
+        bool result = buildingStats.Buy(1, ref gameManagerScript.cookieCount);
+
+        if (result)
+        {
+            Debug.Log("Sucessful buy");
+        }
+        else
+        {
+            Debug.Log("failed buy");
+        }
+    }
+    public void ClickSell()
+    {
+        buildingStats.Sell(1, gameManagerScript.sellBuildingMulti, ref gameManagerScript.cookieCount);
+    }
+    public void setGameManager(GameObject gameManager)
+    {
+        this.gameManager = gameManager;
+        gameManagerScript = this.gameManager.GetComponent<GameManagerScript>();
+    }
+    public void setBuilding(Building building)
+    {
+        if(building == null)
+        {
+            Debug.Log($"Building was null when setting.");
+        }
+        Debug.Log($"Building Getting set");
+        buildingStats = building;
+    }
 }
+
