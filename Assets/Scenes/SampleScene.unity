@@ -370,8 +370,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1206224170}
-        m_TargetAssemblyTypeName: test, Assembly-CSharp
-        m_MethodName: increaseSize
+        m_TargetAssemblyTypeName: GameManagerScript, Assembly-CSharp
+        m_MethodName: ClickCookieButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -643,12 +643,10 @@ MonoBehaviour:
     cookiesPerSecond: 0.5
     price: 10
     boughtCount: 0
-    boughtMulti: 0
   - name: Factory
     cookiesPerSecond: 5
     price: 100
     boughtCount: 0
-    boughtMulti: 0
 --- !u!4 &1206224171
 Transform:
   m_ObjectHideFlags: 0
